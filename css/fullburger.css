@@ -1,0 +1,284 @@
+body.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none
+}
+
+.fullburger {
+  width: 100%;
+  position: relative;
+  background-color: var(--header-color);
+  box-sizing: border-box;
+  color: var(--light-color);
+}
+
+.fullburger_fixed {
+  position: fixed;
+  top: 0 !important;
+  left: 0;
+  right: 0
+}
+
+.fullburger-logo {
+  position: relative;
+  z-index: 102;
+  display: flex;
+  align-items: center
+}
+
+.fullburger-container {
+  position: relative;
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+  box-sizing: inherit
+}
+
+.fullburger-container:before {
+  content: "";
+  position: absolute;
+  z-index: 102;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: var(--header-color)
+}
+
+.fullburger_desktop .fullburger-container:before {
+  display: none
+}
+
+.fullburger-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #00000075;
+  transition-property: opacity, visibility;
+  transition-duration: var(--burger-speed)
+}
+
+.fullburger_active .fullburger-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all
+}
+
+.fullburger-nav {
+  position: fixed;
+  z-index: 100;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-width);
+  max-height: var(--max-height);
+  padding-left: 30px;
+  background-color: var(--header-color);
+  transition-property: top, bottom, left, right;
+  transition-duration: var(--burger-speed);
+  overflow: auto
+}
+
+.fullburger-nav_desktop {
+  position: static;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding-left: 0;
+  background-color: transparent;
+  overflow: visible
+}
+
+.fullburger-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: start;
+  width: 50%;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  box-sizing: inherit
+}
+
+.fullburger-nav_desktop .fullburger-list {
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  width: auto
+}
+
+.fullburger-item {
+  position: relative;
+  box-sizing: inherit;
+  grid-row: auto
+}
+
+.fullburger-nav_desktop .fullburger-item {
+  grid-row: 1/2
+}
+
+.fullburger-link {
+  position: relative;
+  box-sizing: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--light-color);
+  font-size: 18px;
+  font-weight: 700;
+  transition: color .3s ease 0s
+}
+
+.fullburger-item_active>.fullburger-link {
+  color: #e21607
+}
+
+.dropdown {
+  position: relative
+}
+
+.dropdown-list {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  min-width: 130px;
+  padding: 10px;
+  list-style: none;
+  color: #fff;
+  background-color: var(--header-color);
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .3s ease 0s
+}
+
+.dropdown>.dropdown-list-active {
+  position: relative;
+  left: 0
+}
+
+.fullburger-nav_desktop .dropdown-list {
+  position: absolute;
+  left: 0
+}
+
+.fullburger-nav_desktop .dropdown-list .dropdown-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: transform .3s ease 0s
+}
+
+.dropdown-button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin-left: 8px;
+  cursor: pointer
+}
+
+.dropdown-button:after {
+  content: "▼";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 25px;
+  color: #000;
+  transition: transform .3s ease 0s
+}
+
+.fullburger-sub-item {
+  color: #fff
+}
+
+.fullburger-nav_desktop .dropdown-button {
+  width: 15px;
+  height: 15px
+}
+
+.fullburger-nav_desktop .dropdown-button:after {
+  font-size: 15px
+}
+
+.dropdown>.dropdown-list-active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  transform: rotateX(0)
+}
+
+.dropdown-button-active.dropdown-button:after {
+  transform: rotate(180deg)
+}
+
+@media (pointer: fine) and (hover: hover) {
+  .dropdown-hover:hover>.dropdown-list {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transform: rotateX(0)
+  }
+
+  .dropdown-hover:hover>.dropdown-button:after {
+    transform: rotate(180deg)
+  }
+
+  .fullburger-link:hover {
+    color: var(--primary-color)
+  }
+}
+
+.fullburger-button {
+  position: relative;
+  z-index: 103;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: inherit;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.fullburger-button_show {
+  display: inline-flex
+}
+
+.fullburger-button span {
+  box-sizing: inherit;
+  width: 100%;
+  height: 4px;
+  background-color: var(--light-color);
+  transition-property: transform;
+  transition-duration: var(--burger-speed)
+}
+
+.fullburger-button_active span:nth-child(2) {
+  transform: scaleX(0)
+}

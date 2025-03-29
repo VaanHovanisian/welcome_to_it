@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to it</title>
-  </head>
-  <body class="page__body">
-    <h1 class="visually-hidden">Welcome to it</h1>
-    <header class="header">
-      <nav class="nav">
-        <a class="logo" href="/">
-          <img class="logo__img" src="img/logo.svg" alt="logo" />
-          <b class="logo__text">Welcome to it</b>
-        </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#about">About</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to it">
+  <meta name="keywords" content="Welcome to it">
+  <link rel="icon" type="image/png" href="./img/favicon/" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="./img/favicon/site.webmanifest" />
+  <title>Welcome to it</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/fullburger.css">
+  <link rel="stylesheet" href="./css/repeat.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page__body">
+  <h1 class="visually-hidden"><b>Welcome to it</b></h1>
+  <header class="fullburger">
+    <div class="fullburger-container">
+      <a class="fullburger-logo" href="#">
+        <img class="fullburger-logo__img" src="img/logo.jpg" alt="logo" width="25" height="25" />
+        <b class="fullburger-logo__text">Welcome to it</b>
+      </a>
+      <nav class="fullburger-nav">
+        <ul class="fullburger-list">
+          <li class="fullburger-item">
+            <a href="#" class="fullburger-link">home</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#teachers">Teachers</a>
+          <li class="fullburger-item">
+            <a href="#" class="fullburger-link">about</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#courses">Courses</a>
+          <li class="fullburger-item">
+            <a href="#" class="fullburger-link">contact</a>
           </li>
         </ul>
-        <a class="page__tel" href="tel:+37455299242">+374 55 29 92 42</a>
       </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <h2 class="hero__title">Welcome to it</h2>
-        <p class="hero__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
-        </p>
-        <a class="hero__link" href="#">Read more</a>
-        <img class="hero__img" src="img/hero.jpg" alt="" />
-      </section>
-      <section class="about" id="about">
+      <a class="page__tel" href="tel:+37455299242">+374 55 29 92 42</a>
+      <button class="fullburger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="hero page__section">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h2 class="hero__title section-title">Welcome to it</h2>
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
+          </p>
+          <a class="hero__link" href="#">Read more</a>
+        </div>
+        <div>
+          <img class="hero__img" src="img/hero.png" alt="" width="783" height="917" />
+        </div>
+      </div>
+    </section>
+    <section class="about page__section" id="about">
+      <div class="about__container container">
         <h2 class="about__title section-title">About</h2>
         <p class="about__text">
           <b>Welcome to it</b>
@@ -45,51 +72,74 @@
         <ul class="about__list list-reset">
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p></p>
+            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            </p>
           </li>
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p></p>
+            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            </p>
           </li>
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p></p>
+            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            </p>
           </li>
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p></p>
+            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            </p>
           </li>
         </ul>
-      </section>
-      <section class="advantages">
+      </div>
+    </section>
+    <section class="advantages page__section">
+      <div class="advantages__container container">
         <h2 class="advantages__title section-title">Advantages</h2>
-          <ul class="advantages__list list-reset">
-            <li class="advantages__item">
-                <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
-              <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
-            </li>
-            <li class="advantages__item">
-                <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
-              <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
-            </li>
-            <li class="advantages__item"> 
-                <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
-              <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p> 
-            </li> 
-            <li class="advantages__item">
-                <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
-              <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
-            </li>
-          </ul>
-      </section>
-      <section class="teachers" id="teachers">
+        <ul class="advantages__list list-reset">
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="teachers page__section" id="teachers">
+      <div class="teachers__container container">
         <h2 class="teachers__title section-title">Teachers</h2>
-        <p class="teachers__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
-        </p>
-        <img class="teachers__img" src="img/teachers.jpg" alt="" />
-      </section>
-      <section class="courses" id="courses">
+        <ul class="teachers__list list-reset">
+          <li class="teachers__item">
+            <img class="teachers__img" src="img/teachers/1.jpg" alt="">
+            <span class="teachers__subtitle">Lorem ipsum dolor</span>
+            <p class="teachers__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+          <li class="teachers__item">
+            <img class="teachers__img" src="img/teachers/1.jpg" alt="">
+            <span class="teachers__subtitle">Lorem ipsum dolor</span>
+            <p class="teachers__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+          <li class="teachers__item">
+            <img class="teachers__img" src="img/teachers/1.jpg" alt="">
+            <span class="teachers__subtitle">Lorem ipsum dolor</span>
+            <p class="teachers__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="courses page__section" id="courses">
+      <div class="courses__container container">
         <h2 class="courses__title section-title">Courses</h2>
         <ul class="courses__list list-reset">
           <li class="courses__item">
@@ -101,10 +151,12 @@
             <img class="courses__img" src="img/courses/front.jpg" alt="">
             <h3 class="courses__subtitle">Lorem ipsum dolor</h3>
             <p class="courses__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
-          </li> 
+          </li>
         </ul>
-      </section>
-      <section class="contacts">
+      </div>
+    </section>
+    <section class="contacts page__section">
+      <div class="contacts__container container">
         <h2 class="contacts__title section-title">Contacts</h2>
         <p class="contacts__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
@@ -121,13 +173,29 @@
             <option value="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</option>
           </select>
           <div>
-            <label class="contacts__label"><input class="contacts__radio" type="radio" name="type_course"> offline</label>
-            <label class="contacts__label"><input class="contacts__radio" type="radio" name="type_course"> online</label>
+            <label class="contacts__label"><input class="contacts__radio" type="radio" name="type_course">
+              offline</label>
+            <label class="contacts__label"><input class="contacts__radio" type="radio" name="type_course">
+              online</label>
           </div>
           <textarea class="contacts__textarea" placeholder="Message"></textarea>
           <button class="contacts__btn" type="submit">Send</button>
         </form>
-      </section>
-    </main>
-  </body>
+        <div class="contacts__info">
+          <div class="contacts__logo-box">
+            <a class="logo" href="/">
+              <img class="logo__img" src="img/logo.jpg" alt="logo" width="25" height="25" />
+              <b class="logo__text">Welcome to it</b>
+            </a>
+            <small>© Welcome to it</small>
+          </div>
+          <a class="page__tel" href="tel:+37455299242">+374 55 29 92 42</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/fullburger.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,49 @@
+/* header */
+/* /header */
+/* hero */
+.hero {
+  background: var(--dark-color);
+  color: var(--light-color);
+  min-height: 100vh;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__content {
+  flex-basis: 50%;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+}
+
+.hero__text {
+  margin-bottom: 20px;
+}
+
+.hero__link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.hero__img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* /hero */
+/* advantages */
+/* /advantages */
+/* teachers */
+/* /teachers */
+/* courses */
+/* /courses */
+/* contacts */
+/* /contacts */
