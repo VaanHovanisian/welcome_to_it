@@ -22,9 +22,9 @@
   <h1 class="visually-hidden"><b>Welcome to it</b></h1>
   <header class="fullburger">
     <div class="fullburger-container">
-      <a class="fullburger-logo" href="#">
-        <img class="fullburger-logo__img" src="img/logo.jpg" alt="logo" width="25" height="25" />
-        <b class="fullburger-logo__text">Welcome to it</b>
+      <a class="fullburger-logo logo" href="#">
+        <img class="logo__img" src="img/logo.jpg" alt="logo" width="40" height="40" />
+        <b class="logo__text">Welcome to it</b>
       </a>
       <nav class="fullburger-nav">
         <ul class="fullburger-list">
@@ -39,12 +39,19 @@
           </li>
         </ul>
       </nav>
-      <a class="page__tel" href="tel:+37455299242">+374 55 29 92 42</a>
-      <button class="fullburger-button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="fullburger-box">
+        <a class="page__tel page__tel--fullburger" href="tel:+37455299242">
+          <span class="page__tel-number">+374 55 29 92 42</span>
+          <svg class="page__tel-icon">
+            <use xlink:href="./img/sprite.svg#phone"></use>
+          </svg>
+        </a>
+        <button class="fullburger-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
   <main>
@@ -52,10 +59,10 @@
       <div class="hero__container container">
         <div class="hero__content">
           <h2 class="hero__title section-title">Welcome to it</h2>
-          <p class="hero__text">
+          <p class="hero__text text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
           </p>
-          <a class="hero__link" href="#">Read more</a>
+          <a class="hero__link button" href="#">Read more</a>
         </div>
         <div>
           <img class="hero__img" src="img/hero.png" alt="" width="783" height="917" />

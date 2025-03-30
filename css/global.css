@@ -35,6 +35,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
 .page {
   height: 100%;
   scroll-behavior: smooth;

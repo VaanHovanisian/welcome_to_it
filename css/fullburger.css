@@ -16,6 +16,12 @@ body.dis-scroll {
   color: var(--light-color);
 }
 
+.fullburger-box {
+  display: flex;
+  align-items: center;
+  gap: 50px
+}
+
 .fullburger_fixed {
   position: fixed;
   top: 0 !important;
@@ -110,14 +116,20 @@ body.dis-scroll {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  justify-items: start;
-  width: 50%;
+  justify-items: center;
+  /* width: 50%; */
   gap: 30px;
   margin: 0;
   padding: 0;
+  padding-top: 30px;
   list-style: none;
   align-items: center;
-  box-sizing: inherit
+  box-sizing: inherit;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
+
 }
 
 .fullburger-nav_desktop .fullburger-list {
@@ -142,9 +154,13 @@ body.dis-scroll {
   text-decoration: none;
   text-transform: capitalize;
   color: var(--light-color);
-  font-size: 18px;
+  font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1200 - 320)));
   font-weight: 700;
-  transition: color .3s ease 0s
+  transition: color .3s ease 0s;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 .fullburger-item_active>.fullburger-link {
@@ -263,7 +279,12 @@ body.dis-scroll {
   padding: 0;
   border: none;
   background-color: transparent;
-  cursor: pointer
+  cursor: pointer;
+
+  &:hover span {
+    background-color: var(--primary-color)
+  }
+
 }
 
 .fullburger-button_show {
@@ -275,8 +296,9 @@ body.dis-scroll {
   width: 100%;
   height: 4px;
   background-color: var(--light-color);
-  transition-property: transform;
-  transition-duration: var(--burger-speed)
+  transition-property: transform, background-color;
+  transition-duration: var(--burger-speed);
+  border-radius: 2px;
 }
 
 .fullburger-button_active span:nth-child(2) {

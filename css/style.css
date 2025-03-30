@@ -1,16 +1,22 @@
 /* header */
+
 /* /header */
 /* hero */
 .hero {
   background: var(--dark-color);
   color: var(--light-color);
-  min-height: 100vh;
 }
 
 .hero__container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+  }
 }
 
 .hero__content {
@@ -19,6 +25,9 @@
 
 .hero__title {
   margin-bottom: 20px;
+  font-size: calc(40px + (70 - 40) * ((100vw - 320px) / (1200 - 320)));
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .hero__text {

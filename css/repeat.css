@@ -15,6 +15,65 @@
   padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320))) 0;
 }
 
+.page__tel {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  color: #fff;
+  transition: color .3s ease 0s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.page__tel-number {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.page__tel-icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.page__tel--fullburger {
+  position: relative;
+  z-index: 102;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1200 - 320)));
+  transition: color .3s ease 0s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: 480px) {
+    display: block;
+  }
+}
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -23,9 +82,8 @@
 
 .section-title {
   margin: 0;
-  font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1200 - 320)));
   font-weight: 600;
-  font-size: 50px;
   line-height: 160%;
 }
 
@@ -47,4 +105,25 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  color: var(--dark-color);
+  background-color: var(--primary-color);
+  transition: background-color .3s ease 0s, outline .3s ease 0s, color .3s ease 0s;
+
+  &:hover {
+    background-color: var(--dark-color);
+    outline: 2px solid var(--primary-color);
+    color: var(--light-color);
+  }
 }
