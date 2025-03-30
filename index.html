@@ -14,6 +14,7 @@
   <title>Welcome to it</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/fullburger.css">
+  <link rel="stylesheet" href="./css/slider.css">
   <link rel="stylesheet" href="./css/repeat.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -24,7 +25,7 @@
     <div class="fullburger-container">
       <a class="fullburger-logo logo" href="#">
         <img class="logo__img" src="img/logo.jpg" alt="logo" width="40" height="40" />
-        <b class="logo__text">Welcome to it</b>
+        <b class="logo__text page__name">Welcome <span>to</span> it</b>
       </a>
       <nav class="fullburger-nav">
         <ul class="fullburger-list">
@@ -58,7 +59,7 @@
     <section class="hero page__section">
       <div class="hero__container container">
         <div class="hero__content">
-          <h2 class="hero__title section-title">Welcome to it</h2>
+          <h2 class="hero__title section-title"><b class="page__name">Welcome <span>to</span> it</b></h2>
           <p class="hero__text text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
           </p>
@@ -73,28 +74,28 @@
       <div class="about__container container">
         <h2 class="about__title section-title">About</h2>
         <p class="about__text">
-          <b>Welcome to it</b>
+          <b class="page__name about__name">Welcome <span>to</span> it</b> -
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
         </p>
         <ul class="about__list list-reset">
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
             </p>
           </li>
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
             </p>
           </li>
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
             </p>
           </li>
           <li class="about__item">
             <span class="about__number">10</span>
-            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
             </p>
           </li>
         </ul>
@@ -105,44 +106,46 @@
         <h2 class="advantages__title section-title">Advantages</h2>
         <ul class="advantages__list list-reset">
           <li class="advantages__item">
-            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <h3 class="advantages__item-title">Lorem ipsum dolor</h3>
             <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <h3 class="advantages__item-title">Lorem ipsum dolor</h3>
             <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <h3 class="advantages__item-title">Lorem ipsum dolor</h3>
             <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__subtitle">Lorem ipsum dolor</h3>
+            <h3 class="advantages__item-title">Lorem ipsum dolor</h3>
             <p class="advantages__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
         </ul>
       </div>
     </section>
     <section class="teachers page__section" id="teachers">
-      <div class="teachers__container container">
-        <h2 class="teachers__title section-title">Teachers</h2>
-        <ul class="teachers__list list-reset">
-          <li class="teachers__item">
+      <div class="teachers__container container slider" data-slider="slider1">
+        <!-- <h2 class="teachers__title section-title">Teachers</h2> -->
+        <ul class="teachers__list list-reset slider__list">
+          <li class="teachers__item slider__slide">
             <img class="teachers__img" src="img/teachers/1.jpg" alt="">
-            <span class="teachers__subtitle">Lorem ipsum dolor</span>
+            <span class="teachers__item-title">Lorem ipsum dolor</span>
             <p class="teachers__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
-          <li class="teachers__item">
+          <li class="teachers__item slider__slide">
             <img class="teachers__img" src="img/teachers/1.jpg" alt="">
-            <span class="teachers__subtitle">Lorem ipsum dolor</span>
+            <span class="teachers__item-title">Lorem ipsum dolor</span>
             <p class="teachers__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
-          <li class="teachers__item">
+          <li class="teachers__item slider__slide">
             <img class="teachers__img" src="img/teachers/1.jpg" alt="">
-            <span class="teachers__subtitle">Lorem ipsum dolor</span>
+            <span class="teachers__item-title">Lorem ipsum dolor</span>
             <p class="teachers__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</p>
           </li>
         </ul>
+        <button class="slider__button-prev">prev</button>
+        <button class="slider__button-next">next</button>
       </div>
     </section>
     <section class="courses page__section" id="courses">
@@ -202,6 +205,7 @@
     </section>
   </main>
   <script src="./js/fullburger.js"></script>
+  <script src="./js/slider.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

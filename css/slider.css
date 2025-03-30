@@ -1,0 +1,74 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden
+}
+
+.slider__list {
+  display: flex;
+  align-items: center;
+  height: 90%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none
+}
+
+.slider__list::-webkit-scrollbar,
+.slider__list::-moz-scrollbar,
+.slider__list::-ms-scrollbar,
+.slider__list::-o-scrollbar,
+.slider__list::-khtml-scrollbar {
+  display: none
+}
+
+.slider__slide {
+  min-width: calc(100% / var(--per-view) - var(--gap, 0px));
+  height: 100%;
+  scroll-snap-align: start;
+  font-size: 25px;
+  text-align: center;
+  color: #fff
+}
+
+.slider__slide--visible {
+  color: #000
+}
+
+.slider__button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer
+}
+
+.slider__button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer
+}
+
+.slider__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000
+}
+
+.slider__pagination-button {
+  margin: 0 10px;
+  cursor: pointer;
+  display: block
+}
+
+.slider__pagination-button--active {
+  color: #000;
+  font-weight: 700
+}

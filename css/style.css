@@ -14,7 +14,7 @@
   flex-direction: column;
   gap: 30px;
 
-  @media (min-width: 767px) {
+  @media (min-width: 768px) {
     flex-direction: row;
   }
 }
@@ -48,9 +48,88 @@
 }
 
 /* /hero */
+/* ================================= */
+/* about */
+.about__text {
+  max-width: 900px;
+  font-size: 30px;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.about__number {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 160%;
+  color: var(--primary-color);
+}
+
+.about__item {}
+
+/* /about */
+/* ================================= */
 /* advantages */
+
+.advantages {
+  background: #f9f9f9;
+  ;
+}
+
+.advantages__title {
+  margin-bottom: 20px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.advantages__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+
 /* /advantages */
+/* ================================= */
 /* teachers */
+
+.teachers__title {
+  margin-bottom: 20px;
+}
+
+.teachers__list {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; */
+}
+
+/* .teachers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+} */
+
+.teachers__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+.teachers__img {
+  height: calc(200px + (500 - 200) * ((100vw - 320px) / (1200 - 320)));
+  object-fit: cover;
+}
+
 /* /teachers */
 /* courses */
 /* /courses */
