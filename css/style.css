@@ -107,31 +107,162 @@
 }
 
 .teachers__list {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px; */
+  align-items: start;
 }
-
-/* .teachers__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-} */
 
 .teachers__item-title {
   font-weight: 600;
   font-size: 24px;
   line-height: 160%;
+  margin-bottom: 10px;
 }
 
 .teachers__img {
-  height: calc(200px + (500 - 200) * ((100vw - 320px) / (1200 - 320)));
+  width: 100%;
   object-fit: cover;
+  margin-bottom: 20px;
 }
 
 /* /teachers */
+/* ================================= */
 /* courses */
+
+.courses__title {
+  margin-bottom: 20px;
+}
+
+.courses__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--light-color);
+  transition: transform .3s ease 0s, border .3s ease 0s, background-color .3s ease 0s, color .3s ease 0s;
+
+  &:hover {
+    transform: translate(0, -10px);
+    border: 1px solid var(--dark-color);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+
+    .courses__item-button {
+      background-color: var(--light-color);
+      color: var(--dark-color);
+    }
+  }
+}
+
+.courses__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+
+.courses__item-text {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.courses__item-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.courses__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
 /* /courses */
+/* ================================= */
 /* contacts */
+.contacts {
+  background: #f9f9f9;
+  padding-bottom: 0;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+}
+
+.contacts__text {
+  margin-bottom: 20px;
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contacts__input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.contacts__textarea {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.contacts__form-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+}
+
+.contacts__form-radio {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-color);
+
+
+  &:checked {
+    accent-color: var(--primary-color);
+  }
+}
+
+.contacts__select {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.contacts__form-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.contacts__info {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.contacts__info-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
 /* /contacts */

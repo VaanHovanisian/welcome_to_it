@@ -20,7 +20,7 @@ class Slider {
       (this.buttonPrev = document.querySelector(".slider__button-prev")),
       (this.buttonNext = document.querySelector(".slider__button-next")),
       (this.pagination = this.elem.querySelector(".slider__pagination")),
-      (this.paginationButtons = this.pagination.querySelectorAll(
+      (this.paginationButtons = this.pagination?.querySelectorAll(
         ".slider__pagination-button"
       )),
       this.init(),
