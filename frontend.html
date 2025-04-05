@@ -119,12 +119,12 @@
           <input class="contacts__input" required type="text" placeholder="Full Name">
           <input class="contacts__input" required type="email" placeholder="Email">
           <input class="contacts__input" required type="tel" placeholder="Phone">
-          <select name="course" class="contacts__select" required>
+          <select name="course" class="contacts__select" id="">
             <option disabled value="">choose course</option>
             <option value="frontend" selected>frontend</option>
             <option value="backend">backend</option>
             <option value="fullstack">fullstack</option>
-            <option value="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</option>
+            <option value="smm">smm</option>
           </select>
           <div>
             <label class="contacts__form-label"><input class="contacts__form-radio" checked value="offline" type="radio"
@@ -134,8 +134,13 @@
                 name="type_course">
               online</label>
           </div>
-          <textarea class="contacts__textarea" placeholder="Message"></textarea>
-          <button class="contacts__form-button" type="submit">Send</button>
+          <textarea class="contacts__textarea" name="message" placeholder="Message"></textarea>
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <!-- Custom Confirmation / Success Page -->
+          <input type="hidden" name="redirect" value="http://127.0.0.1:5500/index.html">
+          <button class="contacts__form-button button" type="submit">Send</button>
         </form>
       </div>
       <div class="contacts__info">

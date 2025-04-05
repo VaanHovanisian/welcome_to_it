@@ -212,27 +212,34 @@
         <p class="contacts__text text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!
         </p>
-        <form class="contacts__form" action="#">
-          <input class="contacts__input" required type="text" placeholder="Full Name">
-          <input class="contacts__input" required type="email" placeholder="Email">
-          <input class="contacts__input" required type="tel" placeholder="Phone">
-          <select name="course" class="contacts__select" required>
-            <option selected disabled value="">choose course</option>
-            <option value="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</option>
-            <option value="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</option>
-            <option value="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</option>
-            <option value="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum!</option>
+        <form class="contacts__form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Replace with your Access Key -->
+          <input type="hidden" name="access_key" value="84d56656-509f-4c89-b6d2-a071832487fd">
+          <input class="contacts__input" name="fullName" type="text" placeholder="Name">
+          <input class="contacts__input" name="Email" type="email" placeholder="Email">
+          <input class="contacts__input" name="phone" type="tel" placeholder="Phone">
+          <select name="course" class="contacts__select" id="">
+            <option disabled selected value="">choose course</option>
+            <option value="frontend">frontend</option>
+            <option value="backend">backend</option>
+            <option value="fullstack">fullstack</option>
+            <option value="smm">smm</option>
           </select>
           <div>
-            <label class="contacts__form-label"><input class="contacts__form-radio" checked value="offline" type="radio"
+            <label class="contacts__label"><input class="contacts__radio" checked value="offline" type="radio"
                 name="type_course">
               offline</label>
-            <label class="contacts__form-label"><input class="contacts__form-radio" value="online" type="radio"
+            <label class="contacts__label"><input class="contacts__radio" value="online" type="radio"
                 name="type_course">
               online</label>
           </div>
-          <textarea class="contacts__textarea" placeholder="Message"></textarea>
-          <button class="contacts__form-button" type="submit">Send</button>
+          <textarea class="contacts__textarea" name="message" placeholder="Message"></textarea>
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <!-- Custom Confirmation / Success Page -->
+          <input type="hidden" name="redirect" value="http://127.0.0.1:5500/index.html">
+          <button class="contacts__form-button button" type="submit">Send</button>
         </form>
       </div>
       <div class="contacts__info">

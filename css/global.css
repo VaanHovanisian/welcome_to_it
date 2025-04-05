@@ -64,3 +64,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input {
+  accent-color: var(--primary-color);
+}
