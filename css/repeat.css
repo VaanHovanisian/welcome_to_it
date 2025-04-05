@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+.page__hero-img-course {
+  max-width: 400px !important;
+}
+
 .page__section {
   padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320))) 0;
 }
@@ -34,7 +38,7 @@
 .page__tel-number {
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     display: block;
   }
 }
@@ -43,7 +47,7 @@
   width: 40px;
   height: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     display: none;
   }
 }

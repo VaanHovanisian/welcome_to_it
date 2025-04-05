@@ -30,9 +30,12 @@
   white-space: nowrap;
 }
 
-.hero__text {
+.hero__text-show {
   margin-bottom: 20px;
+  min-height: 40px;
+  font-size: 25px;
 }
+
 
 .hero__link {
   display: inline-block;
@@ -118,9 +121,11 @@
 }
 
 .teachers__img {
-  width: 100%;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 /* /teachers */
@@ -152,6 +157,13 @@
       color: var(--dark-color);
     }
   }
+}
+
+.courses__item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 .courses__item-title {
@@ -246,10 +258,12 @@
 }
 
 .contacts__form-button {
+  align-self: center;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 5px;
   background-color: var(--primary-color);
+  font-size: 20px;
   color: var(--dark-color);
 }
 
