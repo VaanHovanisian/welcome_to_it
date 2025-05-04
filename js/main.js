@@ -4,6 +4,7 @@ const heroTextShow = document.querySelector(".hero__text-show");
 const fullBurger = new Fullburger(".fullburger", {
   breakpoint: 992,
   dropdown: {
+    click: true,
     hover: true,
   },
 });

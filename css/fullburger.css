@@ -148,6 +148,10 @@ body.dis-scroll {
   }
   &:hover {
     color: var(--primary-color);
+
+    .dropdown-button:after {
+      color: var(--primary-color);
+    }
   }
 }
 
