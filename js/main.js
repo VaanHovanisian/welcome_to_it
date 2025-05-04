@@ -3,6 +3,9 @@ const heroTextHidden = document.querySelector(".hero__text-hidden");
 const heroTextShow = document.querySelector(".hero__text-show");
 const fullBurger = new Fullburger(".fullburger", {
   breakpoint: 992,
+  dropdown: {
+    hover: true,
+  },
 });
 if (document.querySelector(".slider")) {
   new Slider("slider1");
